@@ -1,13 +1,12 @@
-import string
 with open("input.txt") as data:
 
     sum = 0
 
-    for line in data.readlines():
-        string = line.rstrip()
+    for rawLine in data.readlines():
+        line = rawLine.rstrip()
         
-        compartmentA = string[0:len(string)//2]
-        compartmentB = string[len(string)//2:len(string)]
+        compartmentA = line[0:len(line)//2]
+        compartmentB = line[len(line)//2:len(line)]
 
         match = ""
 
